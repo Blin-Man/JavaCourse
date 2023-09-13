@@ -12,7 +12,7 @@ public class VariableScope {
 		System.out.println(outer);
 		
 		//centuriesExample();
-		//intOverflow();
+		intOverflow();
 		
 		//intInput();
 		//centuryConvert();
@@ -20,7 +20,7 @@ public class VariableScope {
 		//pound2US();
 		//incorrectFloat();
 		//exactSum();
-		specialNum();
+		//specialNum();
 		
 		
 	}
