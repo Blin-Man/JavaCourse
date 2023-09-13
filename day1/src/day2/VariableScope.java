@@ -80,12 +80,14 @@ public class VariableScope {
 		System.out.printf("%.1f Days" + '\n',days);
 		System.out.printf("%.1f Hours" + '\n',hours);
 	}
+	//To show precision of float & double
 	public static void piPrecision() {
 		float floatPI = 3.141592653589793238f;
 		double doublePI = 3.141592653589793238;
 		System.out.println("Float PI is: " + floatPI);
 		System.out.println("Double PI is: " + doublePI);
 	}
+	//converts pound to $
 	public static void pound2US() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Insert value in Pounds: ");
@@ -93,6 +95,8 @@ public class VariableScope {
 		double result = num *1.31;
 		System.out.printf("%.3f pound is $%.3f",num,result);
 	}
+	
+	//shows incorrect value of float based on decimal places
 	public static void incorrectFloat() {
 		double a = 1.0f;
 		double b = 0.33f;
@@ -107,6 +111,7 @@ public class VariableScope {
 		
 	}
 	
+	//calculates the exact summation of inputted values
 	public static void exactSum() {
 		
 		System.out.println("Insert how many values you want to sum up:");
@@ -123,6 +128,8 @@ public class VariableScope {
 		
 		System.out.println("The sum is: " + sum);
 	}
+	
+	//identifies the special numbers (5,7,11) from a number by addition of digits from the value
 	public static void specialNum() {
 		
 		System.out.println("Enter a number: ");
