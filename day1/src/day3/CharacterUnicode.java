@@ -31,6 +31,13 @@ public class CharacterUnicode {
 		//concatName();
 		//modBig();
 		//condStateDemo();
+		//freezeWeather();
+		//numberCheck();
+		//condElseIf();
+		//covfefe();
+		//validTriangle();
+		//postPreFix();
+		sumNumber();
 	}
 	//Reads the input and gives the unicode value
 	public static void unicodeFinder() {
@@ -103,10 +110,150 @@ public class CharacterUnicode {
 			System.out.println("It's wet");
 		}else {
 			System.out.println("Can be dry");
+		}	
+		
+	}
+	public static void freezeWeather() {
+		
+		Scanner sc = new Scanner (System.in);
+		double temp = sc.nextDouble();
+		
+		if(temp <-0) 
+			System.out.println("It's freezing time");
+		//System.out.println("It's freezing time again?");
+		else System.out.println("It's not freezing time ");
+		System.out.println("It's morbin time"+'\n');
+		
+		int num = sc.nextInt();
+		if(num %2 == 0) {
+			System.out.println("even steven");
+		}else {
+			System.out.println("odd jarod");
 		}
+	}
+	//outputs number as words, only 1...9
+	public static void numberCheck() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insert a value:");
+		int val = sc.nextInt();
 		
+		if(val<10 && val>0) {
+			if(val==9)
+				System.out.println("NINE");
+			else if(val==8)
+				System.out.println("EIGHT");
+			else if(val==7)
+				System.out.println("SEVEN");
+			else if(val==6)
+				System.out.println("SIX");
+			else if(val==5)
+				System.out.println("FIVE");
+			else if(val==4)
+				System.out.println("FOUR");
+			else if(val==3)
+				System.out.println("THREE");
+			else if(val==2)
+				System.out.println("TWO");
+			else if(val==1)
+				System.out.println("ONE");
+		}else
+			System.out.println("It's not in the range of 1 ... 9");
+	}
+	
+	public static void condElseIf() {
+		Scanner sc = new Scanner(System.in);
+		/*String pass = sc.nextLine();
 		
+		if(pass.equals("s3cr3t!"))
+			System.out.println("My man");
+		else
+			System.out.println("Get off this program");*/
+		
+		//area of figure
+		System.out.println("What shape is it?");
+		String figure = sc.nextLine();
+		double area;
+		
+		if(figure.equals("square")) {
 			
+			System.out.println("Side length? : ");
+			int side = sc.nextInt();
+			area = side*side;
+			System.out.printf("Area of square is %.2f",area);
+			
+		}else if(figure.equals("rectangle")) {
+			
+			System.out.println("Side length? : ");
+			int side = sc.nextInt();
+			System.out.println("width length? : ");
+			int width = sc.nextInt();
+			area = side*width;
+			System.out.printf("Area of rectangle is %.2f",area);
+		}else if(figure.equals("circle")) {
+			
+			System.out.println("Radius? : ");
+			int radius = sc.nextInt();
+			area = 2*3.142*radius;
+			System.out.printf("Area of circle is %.2f",area);
+		}else
+			System.out.println("Doesn't look like anything to me");
+	}
+	public static void covfefe() {
+		Scanner sc = new Scanner(System.in);
+		double price = 0;
 		
+		System.out.println("Coffee or tea? :");
+		String drink = sc.nextLine();
+		System.out.println("Sugar? :");
+		String extra = sc.nextLine();
+		if(drink.equals("coffee"))
+			price = 1.00;
+		else if(drink.equals("tea"))
+			price = 0.60;
+		else
+			System.out.println("We got none of that");
+		
+		if(extra.equals("yes"))
+			price+=0.40;
+		System.out.printf("Final Price: %.2f",price);	
+	}
+	public static void validTriangle() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Side 1 unit: ");
+		int side1 = sc.nextInt();
+		System.out.println("Side 2 unit: ");
+		int side2 = sc.nextInt();
+		System.out.println("Side 3 unit: ");
+		int side3 = sc.nextInt();
+		
+		if(side1+side2 <= side3 || side1+side3 <= side2 || side2+side3 <= side1)
+			System.out.println("Not a valid triangle");
+		else
+			System.out.println("It's a valid triangle");
+			
+	}
+	
+	public static void postPreFix() {
+		int a=1;
+		System.out.println(--a);
+		System.out.println(a);
+		
+		System.out.println(a--);
+		System.out.println(a);
+	}
+	
+	public static void sumNumber() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Insert a number: ");
+		int number = sc.nextInt();
+		int sum=1;
+		
+		for(int i=2;i<=number;i++) {
+			System.out.printf("%d + %d"+'\n',sum,i);
+			sum+=i;
+		}
+		System.out.printf("The sum of numbers pertaining to %d is %d ",number,sum);
 	}
 }
