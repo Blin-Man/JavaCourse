@@ -12,11 +12,11 @@ public class VariableScope {
 		System.out.println(outer);
 		
 		//centuriesExample();
-		intOverflow();
+		//intOverflow();
 		
 		//intInput();
 		//centuryConvert();
-		//piPrecision();
+		piPrecision();
 		//pound2US();
 		//incorrectFloat();
 		//exactSum();
