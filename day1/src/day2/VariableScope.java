@@ -16,11 +16,11 @@ public class VariableScope {
 		
 		//intInput();
 		//centuryConvert();
-		piPrecision();
+		//piPrecision();
 		//pound2US();
 		//incorrectFloat();
 		//exactSum();
-		//specialNum();
+		specialNum();
 		
 		
 	}
@@ -133,13 +133,16 @@ public class VariableScope {
 			int sumOfDigits = 0;
 			int digits = num;
 			while(digits >0) {
+				System.out.println("Current Number: " + num);
+				System.out.println("==================") ;
+				//%10 is mod 10, e.g 1%10 is 1 because %10 takes the remainder instead
 				sumOfDigits += digits %10;
-				//System.out.println("sumOfDigits: " + sumOfDigits);
+				System.out.println("sumOfDigits: " + sumOfDigits);
 				digits = digits /10;
-				//System.out.println("Digits: " + digits);
+				System.out.println("Digits: " + digits);
 			}
 			boolean check = (sumOfDigits == 5 || sumOfDigits == 7 || sumOfDigits == 11 );
-			System.out.println(num + " is " + check );
+			System.out.println(num + " is " + check +'\n');
 		}
 		
 	}
