@@ -25,6 +25,21 @@ public class CharacterUnicode {
 		System.out.println(dc.equals(cd));
 		System.out.println(dc == cd);
 		
+		byte i = 100;
+
+		// Automatic type conversion
+		// Integer to long type
+		float l = i;
+
+		// Automatic type conversion
+		// long to float type
+		double f = l;
+
+		// Print and display commands
+		System.out.println("Int value " + i);
+		System.out.println("Long value " + l);
+		System.out.println("Float value " + f);
+		
 		//charLiteral();
 		//unicodeFinder();
 		//reverseChar();
@@ -37,7 +52,9 @@ public class CharacterUnicode {
 		//covfefe();
 		//validTriangle();
 		//postPreFix();
-		sumNumber();
+		//sumNumber();
+		loopnum7();
+		
 	}
 	//Reads the input and gives the unicode value
 	public static void unicodeFinder() {
@@ -241,7 +258,7 @@ public class CharacterUnicode {
 		
 		System.out.println(a--);
 		System.out.println(a);
-	}
+	}//
 	
 	public static void sumNumber() {
 		Scanner sc = new Scanner(System.in);
@@ -256,4 +273,15 @@ public class CharacterUnicode {
 		}
 		System.out.printf("The sum of numbers pertaining to %d is %d ",number,sum);
 	}
+	public static void loopnum7() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insert a number: ");
+		int n = sc.nextInt();
+
+		for(int i = 7; i<=n;i+=10) {
+			System.out.printf("%d \n",i);
+		}
+	}
+	
+	
 }
