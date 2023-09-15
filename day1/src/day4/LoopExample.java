@@ -564,4 +564,6 @@ public class LoopExample {
 		System.out.printf("\nMin number: %d",min);
 	}
 	
+	//
+	
 }
