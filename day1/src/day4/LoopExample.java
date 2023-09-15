@@ -29,7 +29,14 @@ public class LoopExample {
 		//atm();
 		//big5();
 		//decreaseNo();
-		numRange();
+		//numRange();
+		//oddNum();
+		//numProcessor();
+		//sumDigit();
+		//favBook();
+		minMax();
+		
+		
 		
 	}
 	
@@ -450,5 +457,111 @@ public class LoopExample {
 		System.out.println(num);
 	}
 	
+	//asks for an odd int input, stop when odd int found
+	public static void oddNum() {
+		System.out.println("Enter an odd number: ");
+		int input = sc.nextInt();
+		
+		while(input%2==0) {
+			System.out.println("It's an even number, enter an odd one: ");
+			input = sc.nextInt();
+		}
+		System.out.printf("%d is an odd number, very peculiar",input);
+	}
+	
+	//processes a number (+ - and display)
+	public static void numProcessor() {
+		
+		System.out.println("Enter a number: ");
+		int num = sc.nextInt();
+		boolean process = true;
+		
+		while(process) {
+			
+			System.out.printf("What to do with %d ? \n",num);
+			System.out.println(" 1)Inc \n 2)Dec \n 3)End \n");
+		    int select = sc.nextInt();
+			
+			switch(select) {
+			
+			case 1: num++;
+					System.out.println(num);
+					break;
+					
+			case 2: num--;
+					System.out.println(num);
+					break;
+					
+			case 3: process = false;
+					System.out.printf("%d is the final value after process", num);
+					break;
+			
+			default: System.out.println("Invalid selection, try again ");
+					 break;
+
+			}
+		}
+	}
+	
+	//sum digits of inputted number
+	public static void sumDigit() {
+		
+		System.out.print("Enter a number: ");
+		int num = sc.nextInt();
+		int sum = 0;
+		while(num>0) {
+			sum += num%10;
+			num/= 10;
+			System.out.printf("sum %d \n",sum);
+		}
+		System.out.printf("\n Sum of digits : %d ",sum);
+	}
+	
+	//finds inputted favourite book
+	public static void favBook() {
+		
+		System.out.print("Type in your favourite book: ");
+		String fav = sc.nextLine();
+		System.out.print("Type in book title: ");
+		String book = sc.nextLine();
+		
+		while(!book.equals(fav)) {
+			System.out.println("Not a favourite book: "+book+'\n');
+			System.out.print("Type in book title: ");
+			book = sc.nextLine();
+		}
+		
+		System.out.println(" \nThat's a favourite book: " + fav);
+	}
+	
+	//finds the max and min number among the inputted numbers
+	public static void minMax() {
+		boolean loop = true;
+		int min = 0;
+		int max = 0;
+		int count = 0;
+		
+		while(loop) {
+			System.out.println("Input a number: {END to end} ");
+			String select = sc.nextLine();
+			if(select.equals("END")) 
+				break;
+			else if(!select.equals("END"))
+					continue;
+			int num = Integer.parseInt(select);
+			count++;
+			if(count==1) {
+				min=num;
+				max=num;
+			}
+			if(num<min)
+				min=num;
+			if(num>max)
+				max=num;
+			
+		}
+		System.out.printf("\nMax number: %d",max);
+		System.out.printf("\nMin number: %d",min);
+	}
 	
 }
