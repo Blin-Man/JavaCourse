@@ -1,5 +1,6 @@
 package day5;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ComplexLoop {
@@ -15,7 +16,12 @@ public class ComplexLoop {
 		//sumDigitCalc();
 		//apartmentBuilder();
 		//travelSavings();
-		letterComb();
+		//letterComb();
+		//dayWeek();
+		//arrayImport();
+		//reverseArray();
+		foreachArray();
+		System.out.println("End of program");
 		
 	}
 	
@@ -125,6 +131,7 @@ public class ComplexLoop {
 					System.out.printf("O%d%d ",row,column);
 				else
 					System.out.printf("A%d%d ",row,column);
+				
 			}
 			System.out.println();
 		}
@@ -177,5 +184,50 @@ public class ComplexLoop {
 		System.out.printf("\n\n%d combination(s)",count);
 		
 	}
+	
+	public static void dayWeek() {
+		
+		String[] days = {"Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+		
+		while(true) {
+		System.out.println("Enter a day number: ");
+		int day = sc.nextInt();
+		if(day==0)
+			break;
+		
+		if(day>= 1 && day <= 7) 
+			System.out.println(days[day-1]);
+		else
+			System.out.println("There are only 7 days in a week");
+		}
+		return ;
+	}
+	
+	public static void arrayImport() {
+		String inputline = sc.nextLine();
+		String[] items = inputline.split(" ");
+		int[] arr = Arrays.stream(items).mapToInt(e -> Integer.parseInt(e)).toArray();
+		System.out.println(String.join("\n",items));
+	}
+	
+	public static void reverseArray() {
+		System.out.print("Enter the size of array: ");
+		int n = Integer.parseInt(sc.nextLine());
+		int[] arr = new int [n];
+		for (int i = 0; i < n; i++)
+			arr[i]= Integer.parseInt(sc.nextLine());
+		
+		for(int i = n-1; i>=0;i--)
+			System.out.print(arr[i]+ " ");
+		System.out.println();
+	}
+	
+	public static void foreachArray() {
+		int[]numbers= {1, 2, 3, 4, 5};
+		for(int number:numbers)
+			System.out.println(number + " ");
+	}
+	
+	
 
 }
