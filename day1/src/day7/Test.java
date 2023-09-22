@@ -1,10 +1,12 @@
 package day7;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,7 +47,23 @@ public class Test {
 //		wordFilter();
 //		sortLarge3();
 //		randWord();
-		bigFactor();
+//		bigFactor();
+
+		BigDecimal initialAmount = new BigDecimal(sc.next()); 
+		BigDecimal interestRate = new BigDecimal(sc.next());
+		BigDecimal hundred = new BigDecimal(100); 
+		BigDecimal total = initialAmount.add(
+		initialAmount.multiply(interestRate.divide(hundred)));
+		// total = initialAmount + (initialAmount * (interestRate / 100))
+		System.out.println(total);
+	}
+
+	private static String repeatStr(String str, int length) {
+		String replacement = "";
+		for (int i = 0; i < length; i++) {
+			replacement += str;
+		}
+		return replacement;
 	}
 
 	public static void linkedListSwap() {
